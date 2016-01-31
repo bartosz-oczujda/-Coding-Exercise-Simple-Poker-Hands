@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC92D4BA1C5E28C600036061 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4B91C5E28C600036061 /* main.swift */; };
+		CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4C71C5E639F00036061 /* Simple_Poker_Hands_Test.swift */; };
+		CC92D4CD1C5E63BA00036061 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4B91C5E28C600036061 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,20 @@
 /* Begin PBXFileReference section */
 		CC92D4B61C5E28C600036061 /* Simple-Poker-Hands */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Simple-Poker-Hands"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC92D4B91C5E28C600036061 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CC92D4C51C5E639F00036061 /* Simple-Poker-Hands-Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Poker-Hands-Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC92D4C71C5E639F00036061 /* Simple_Poker_Hands_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Poker_Hands_Test.swift; sourceTree = "<group>"; };
+		CC92D4C91C5E63A000036061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC92D4B31C5E28C600036061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC92D4C21C5E639F00036061 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				CC92D4B81C5E28C600036061 /* Simple-Poker-Hands */,
+				CC92D4C61C5E639F00036061 /* Simple-Poker-Hands-Test */,
 				CC92D4B71C5E28C600036061 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CC92D4B61C5E28C600036061 /* Simple-Poker-Hands */,
+				CC92D4C51C5E639F00036061 /* Simple-Poker-Hands-Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +71,26 @@
 		CC92D4B81C5E28C600036061 /* Simple-Poker-Hands */ = {
 			isa = PBXGroup;
 			children = (
+				CC92D4C01C5E612D00036061 /* cards */,
 				CC92D4B91C5E28C600036061 /* main.swift */,
 			);
 			path = "Simple-Poker-Hands";
+			sourceTree = "<group>";
+		};
+		CC92D4C01C5E612D00036061 /* cards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = cards;
+			sourceTree = "<group>";
+		};
+		CC92D4C61C5E639F00036061 /* Simple-Poker-Hands-Test */ = {
+			isa = PBXGroup;
+			children = (
+				CC92D4C71C5E639F00036061 /* Simple_Poker_Hands_Test.swift */,
+				CC92D4C91C5E63A000036061 /* Info.plist */,
+			);
+			path = "Simple-Poker-Hands-Test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +113,23 @@
 			productReference = CC92D4B61C5E28C600036061 /* Simple-Poker-Hands */;
 			productType = "com.apple.product-type.tool";
 		};
+		CC92D4C41C5E639F00036061 /* Simple-Poker-Hands-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC92D4CA1C5E63A000036061 /* Build configuration list for PBXNativeTarget "Simple-Poker-Hands-Test" */;
+			buildPhases = (
+				CC92D4C11C5E639F00036061 /* Sources */,
+				CC92D4C21C5E639F00036061 /* Frameworks */,
+				CC92D4C31C5E639F00036061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple-Poker-Hands-Test";
+			productName = "Simple-Poker-Hands-Test";
+			productReference = CC92D4C51C5E639F00036061 /* Simple-Poker-Hands-Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +141,9 @@
 				ORGANIZATIONNAME = Pixelrockit;
 				TargetAttributes = {
 					CC92D4B51C5E28C600036061 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					CC92D4C41C5E639F00036061 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -110,9 +161,20 @@
 			projectRoot = "";
 			targets = (
 				CC92D4B51C5E28C600036061 /* Simple-Poker-Hands */,
+				CC92D4C41C5E639F00036061 /* Simple-Poker-Hands-Test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC92D4C31C5E639F00036061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC92D4B21C5E28C600036061 /* Sources */ = {
@@ -120,6 +182,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC92D4BA1C5E28C600036061 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC92D4C11C5E639F00036061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC92D4CD1C5E63BA00036061 /* main.swift in Sources */,
+				CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +291,28 @@
 			};
 			name = Release;
 		};
+		CC92D4CB1C5E63A000036061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple-Poker-Hands-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelrockit.Simple-Poker-Hands-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC92D4CC1C5E63A000036061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple-Poker-Hands-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelrockit.Simple-Poker-Hands-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -237,6 +330,14 @@
 			buildConfigurations = (
 				CC92D4BE1C5E28C600036061 /* Debug */,
 				CC92D4BF1C5E28C600036061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC92D4CA1C5E63A000036061 /* Build configuration list for PBXNativeTarget "Simple-Poker-Hands-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC92D4CB1C5E63A000036061 /* Debug */,
+				CC92D4CC1C5E63A000036061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
