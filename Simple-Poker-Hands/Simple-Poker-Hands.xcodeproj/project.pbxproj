@@ -10,6 +10,12 @@
 		CC92D4BA1C5E28C600036061 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4B91C5E28C600036061 /* main.swift */; };
 		CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4C71C5E639F00036061 /* Simple_Poker_Hands_Test.swift */; };
 		CC92D4CD1C5E63BA00036061 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC92D4B91C5E28C600036061 /* main.swift */; };
+		CC9DA87D1C5E9E200047F13B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA87C1C5E9E200047F13B /* Card.swift */; };
+		CC9DA87E1C5E9E200047F13B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA87C1C5E9E200047F13B /* Card.swift */; };
+		CC9DA8871C5EA42B0047F13B /* CardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */; };
+		CC9DA8881C5EA42B0047F13B /* CardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */; };
+		CC9DA88A1C5EA4850047F13B /* HandProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8891C5EA4850047F13B /* HandProcessor.swift */; };
+		CC9DA88B1C5EA4850047F13B /* HandProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8891C5EA4850047F13B /* HandProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +36,9 @@
 		CC92D4C51C5E639F00036061 /* Simple-Poker-Hands-Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Poker-Hands-Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC92D4C71C5E639F00036061 /* Simple_Poker_Hands_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Poker_Hands_Test.swift; sourceTree = "<group>"; };
 		CC92D4C91C5E63A000036061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9DA87C1C5E9E200047F13B /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardProcessor.swift; sourceTree = "<group>"; };
+		CC9DA8891C5EA4850047F13B /* HandProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +80,7 @@
 		CC92D4B81C5E28C600036061 /* Simple-Poker-Hands */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DA8851C5EA4040047F13B /* processor */,
 				CC92D4C01C5E612D00036061 /* cards */,
 				CC92D4B91C5E28C600036061 /* main.swift */,
 			);
@@ -80,6 +90,7 @@
 		CC92D4C01C5E612D00036061 /* cards */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DA87C1C5E9E200047F13B /* Card.swift */,
 			);
 			name = cards;
 			sourceTree = "<group>";
@@ -91,6 +102,23 @@
 				CC92D4C91C5E63A000036061 /* Info.plist */,
 			);
 			path = "Simple-Poker-Hands-Test";
+			sourceTree = "<group>";
+		};
+		CC9DA8851C5EA4040047F13B /* processor */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DA88C1C5EAD170047F13B /* hand_processor */,
+				CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */,
+			);
+			name = processor;
+			sourceTree = "<group>";
+		};
+		CC9DA88C1C5EAD170047F13B /* hand_processor */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DA8891C5EA4850047F13B /* HandProcessor.swift */,
+			);
+			name = hand_processor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC92D4BA1C5E28C600036061 /* main.swift in Sources */,
+				CC9DA88A1C5EA4850047F13B /* HandProcessor.swift in Sources */,
+				CC9DA87D1C5E9E200047F13B /* Card.swift in Sources */,
+				CC9DA8871C5EA42B0047F13B /* CardProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9DA8881C5EA42B0047F13B /* CardProcessor.swift in Sources */,
 				CC92D4CD1C5E63BA00036061 /* main.swift in Sources */,
+				CC9DA88B1C5EA4850047F13B /* HandProcessor.swift in Sources */,
+				CC9DA87E1C5E9E200047F13B /* Card.swift in Sources */,
 				CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +366,7 @@
 				CC92D4BF1C5E28C600036061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC92D4CA1C5E63A000036061 /* Build configuration list for PBXNativeTarget "Simple-Poker-Hands-Test" */ = {
 			isa = XCConfigurationList;
@@ -340,6 +375,7 @@
 				CC92D4CC1C5E63A000036061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
