@@ -16,6 +16,8 @@
 		CC9DA8881C5EA42B0047F13B /* CardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */; };
 		CC9DA88A1C5EA4850047F13B /* HandProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8891C5EA4850047F13B /* HandProcessor.swift */; };
 		CC9DA88B1C5EA4850047F13B /* HandProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8891C5EA4850047F13B /* HandProcessor.swift */; };
+		CC9DA88E1C601B1B0047F13B /* PairProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */; };
+		CC9DA88F1C601B1B0047F13B /* PairProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,7 @@
 		CC9DA87C1C5E9E200047F13B /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CC9DA8861C5EA42B0047F13B /* CardProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardProcessor.swift; sourceTree = "<group>"; };
 		CC9DA8891C5EA4850047F13B /* HandProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandProcessor.swift; sourceTree = "<group>"; };
+		CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CC9DA8891C5EA4850047F13B /* HandProcessor.swift */,
+				CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */,
 			);
 			name = hand_processor;
 			sourceTree = "<group>";
@@ -210,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC92D4BA1C5E28C600036061 /* main.swift in Sources */,
+				CC9DA88E1C601B1B0047F13B /* PairProcessor.swift in Sources */,
 				CC9DA88A1C5EA4850047F13B /* HandProcessor.swift in Sources */,
 				CC9DA87D1C5E9E200047F13B /* Card.swift in Sources */,
 				CC9DA8871C5EA42B0047F13B /* CardProcessor.swift in Sources */,
@@ -222,6 +227,7 @@
 			files = (
 				CC9DA8881C5EA42B0047F13B /* CardProcessor.swift in Sources */,
 				CC92D4CD1C5E63BA00036061 /* main.swift in Sources */,
+				CC9DA88F1C601B1B0047F13B /* PairProcessor.swift in Sources */,
 				CC9DA88B1C5EA4850047F13B /* HandProcessor.swift in Sources */,
 				CC9DA87E1C5E9E200047F13B /* Card.swift in Sources */,
 				CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */,

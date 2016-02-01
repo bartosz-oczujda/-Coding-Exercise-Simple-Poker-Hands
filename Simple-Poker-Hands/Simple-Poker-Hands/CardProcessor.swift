@@ -28,7 +28,7 @@ class CardProcessor {
         let hands = Hand.enumerate().reverse()
         
         for hand in hands {
-            //loop over all hand processors to find the strongest hands
+            //loop over all hand processors to find the strongest hand
         }
         
         return ""

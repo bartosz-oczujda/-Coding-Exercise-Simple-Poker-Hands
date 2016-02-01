@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Foundation
 
 class Simple_Poker_Hands_Test: XCTestCase {
     
@@ -20,17 +21,15 @@ class Simple_Poker_Hands_Test: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertTrue(true)
+    func findPairTest(){
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Queen, suit: CardSuit.Spades),
+        ]
+        let pairProcessor = PairProcessor()
+        XCTAssertTrue(pairProcessor.process(cards))
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
