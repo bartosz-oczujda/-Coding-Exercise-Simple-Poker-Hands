@@ -21,7 +21,20 @@ class Simple_Poker_Hands_Test: XCTestCase {
         super.tearDown()
     }
     
-    func findPairTest(){
+    func testFindTwoPair_success(){
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+        ]
+        
+        let twoPairProcessor = TwoPairProcessor()
+        XCTAssertTrue(twoPairProcessor.process(cards))
+    }
+    
+    func testFindPair_success1(){
         let cards = [
             Card(rank: CardRank.Ace, suit: CardSuit.Spades),
             Card(rank: CardRank.Two, suit: CardSuit.Spades),
@@ -29,7 +42,34 @@ class Simple_Poker_Hands_Test: XCTestCase {
             Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
             Card(rank: CardRank.Queen, suit: CardSuit.Spades),
         ]
+        
         let pairProcessor = PairProcessor()
         XCTAssertTrue(pairProcessor.process(cards))
+    }
+    
+    func testFindPair_fail1(){
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.King, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Queen, suit: CardSuit.Spades),
+        ]
+        
+        let pairProcessor = PairProcessor()
+        XCTAssertFalse(pairProcessor.process(cards))
+    }
+    
+    func testHighCard(){
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Queen, suit: CardSuit.Spades),
+        ]
+        
+        let highCardProcessor = HighCardProcessor()
+        XCTAssertTrue(highCardProcessor.process(cards))
     }
 }
