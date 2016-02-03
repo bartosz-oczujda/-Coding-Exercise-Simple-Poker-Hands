@@ -22,6 +22,12 @@
 		CC9DA88F1C601B1B0047F13B /* PairProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */; };
 		CC9DA8911C614FD80047F13B /* HighCardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8901C614FD80047F13B /* HighCardProcessor.swift */; };
 		CC9DA8921C614FD80047F13B /* HighCardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DA8901C614FD80047F13B /* HighCardProcessor.swift */; };
+		CCC1032E1C62A000008BE9C2 /* SetFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1032D1C62A000008BE9C2 /* SetFinder.swift */; };
+		CCC1032F1C62A000008BE9C2 /* SetFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1032D1C62A000008BE9C2 /* SetFinder.swift */; };
+		CCC103311C62B220008BE9C2 /* ThreeOfAKindProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC103301C62B220008BE9C2 /* ThreeOfAKindProcessor.swift */; };
+		CCC103321C62B220008BE9C2 /* ThreeOfAKindProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC103301C62B220008BE9C2 /* ThreeOfAKindProcessor.swift */; };
+		CCC103341C62B3F0008BE9C2 /* FourOfAKindProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC103331C62B3F0008BE9C2 /* FourOfAKindProcessor.swift */; };
+		CCC103351C62B3F0008BE9C2 /* FourOfAKindProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC103331C62B3F0008BE9C2 /* FourOfAKindProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +54,9 @@
 		CC9DA8891C5EA4850047F13B /* HandProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandProcessor.swift; sourceTree = "<group>"; };
 		CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairProcessor.swift; sourceTree = "<group>"; };
 		CC9DA8901C614FD80047F13B /* HighCardProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighCardProcessor.swift; sourceTree = "<group>"; };
+		CCC1032D1C62A000008BE9C2 /* SetFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetFinder.swift; sourceTree = "<group>"; };
+		CCC103301C62B220008BE9C2 /* ThreeOfAKindProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeOfAKindProcessor.swift; sourceTree = "<group>"; };
+		CCC103331C62B3F0008BE9C2 /* FourOfAKindProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourOfAKindProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,7 @@
 		CC92D4B81C5E28C600036061 /* Simple-Poker-Hands */ = {
 			isa = PBXGroup;
 			children = (
+				CCC1032C1C629FBE008BE9C2 /* finder */,
 				CC9DA8851C5EA4040047F13B /* processor */,
 				CC92D4C01C5E612D00036061 /* cards */,
 				CC92D4B91C5E28C600036061 /* main.swift */,
@@ -129,8 +139,18 @@
 				CC9DA88D1C601B1B0047F13B /* PairProcessor.swift */,
 				CC9DA8901C614FD80047F13B /* HighCardProcessor.swift */,
 				CC581A9F1C61635B0066A1EA /* TwoPairProcessor.swift */,
+				CCC103301C62B220008BE9C2 /* ThreeOfAKindProcessor.swift */,
+				CCC103331C62B3F0008BE9C2 /* FourOfAKindProcessor.swift */,
 			);
 			name = hand_processor;
+			sourceTree = "<group>";
+		};
+		CCC1032C1C629FBE008BE9C2 /* finder */ = {
+			isa = PBXGroup;
+			children = (
+				CCC1032D1C62A000008BE9C2 /* SetFinder.swift */,
+			);
+			name = finder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC92D4BA1C5E28C600036061 /* main.swift in Sources */,
+				CCC103341C62B3F0008BE9C2 /* FourOfAKindProcessor.swift in Sources */,
 				CC581AA01C61635B0066A1EA /* TwoPairProcessor.swift in Sources */,
 				CC9DA88E1C601B1B0047F13B /* PairProcessor.swift in Sources */,
+				CCC103311C62B220008BE9C2 /* ThreeOfAKindProcessor.swift in Sources */,
 				CC9DA88A1C5EA4850047F13B /* HandProcessor.swift in Sources */,
 				CC9DA87D1C5E9E200047F13B /* Card.swift in Sources */,
 				CC9DA8911C614FD80047F13B /* HighCardProcessor.swift in Sources */,
+				CCC1032E1C62A000008BE9C2 /* SetFinder.swift in Sources */,
 				CC9DA8871C5EA42B0047F13B /* CardProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,8 +264,11 @@
 				CC9DA88F1C601B1B0047F13B /* PairProcessor.swift in Sources */,
 				CC9DA88B1C5EA4850047F13B /* HandProcessor.swift in Sources */,
 				CC9DA87E1C5E9E200047F13B /* Card.swift in Sources */,
+				CCC103321C62B220008BE9C2 /* ThreeOfAKindProcessor.swift in Sources */,
 				CC92D4C81C5E639F00036061 /* Simple_Poker_Hands_Test.swift in Sources */,
 				CC581AA11C61644F0066A1EA /* TwoPairProcessor.swift in Sources */,
+				CCC103351C62B3F0008BE9C2 /* FourOfAKindProcessor.swift in Sources */,
+				CCC1032F1C62A000008BE9C2 /* SetFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,24 @@ class Simple_Poker_Hands_Test: XCTestCase {
         super.tearDown()
     }
     
+    func testSetFinder(){
+        let setFinder = SetFinder()
+        
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+        ]
+        
+        let result = setFinder.findSet(cards, length: 2)
+        
+        XCTAssertEqual(result.found.count, 2)
+        XCTAssertEqual(result.rest.count, 3)
+        
+    }
+    
     func testFindTwoPair_success(){
         let cards = [
             Card(rank: CardRank.Ace, suit: CardSuit.Spades),
@@ -32,6 +50,35 @@ class Simple_Poker_Hands_Test: XCTestCase {
         
         let twoPairProcessor = TwoPairProcessor()
         XCTAssertTrue(twoPairProcessor.process(cards))
+    }
+    
+    func testFindThree(){
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Two, suit: CardSuit.Spades),
+        ]
+        
+        let threeOfAkindProcessor = ThreeOfAKindProcessor()
+        
+        XCTAssertTrue(threeOfAkindProcessor.process(cards))
+        
+    }
+    
+    func testFindFour() {
+        let cards = [
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+            Card(rank: CardRank.Three, suit: CardSuit.Hearts),
+            Card(rank: CardRank.Ace, suit: CardSuit.Diamonds),
+            Card(rank: CardRank.Ace, suit: CardSuit.Spades),
+        ]
+        
+        let fourOfAKindProcessor = FourOfAKindProcessor()
+        
+        XCTAssertTrue(fourOfAKindProcessor.process(cards))
     }
     
     func testFindPair_success1(){
